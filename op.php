@@ -15,6 +15,7 @@ switch ($op) {
         $name = $_REQUEST['name'];
         $lastname = $_REQUEST['lastname'];
         $dao->add($name, $lastname);
+        echo "added";
 
         break;
     
