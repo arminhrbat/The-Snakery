@@ -1,0 +1,55 @@
+.add-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .add-item .form-group {
+    width: calc(50% - 10px);
+  }
+  
+  .add-item .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .add-item .form-group input[type="text"],
+  .add-item .form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .add-item .form-group input[type="text"]:focus,
+  .add-item .form-group textarea:focus {
+    border-color: #ff0000;
+  }
+  
+  .add-item .form-group .description {
+    height: 200px;
+    resize: vertical;
+  }
+  
+  .add-item form button {
+    background-color: #ff0000;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-item form button:hover {
+    background-color: #990000;
+  }
+  

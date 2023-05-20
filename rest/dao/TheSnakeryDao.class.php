@@ -28,6 +28,7 @@ class TheSnakeryDao{
         return $stmt -> fetchAll(PDO::FETCH_ASSOC); //FETCH ASSOC means that output will be associative array -> it is more readable
         
     }
+    
 
     //method used to add something to the databse ie. name
     public function add($name, $lastname){

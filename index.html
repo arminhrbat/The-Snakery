@@ -15,6 +15,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/snake-service.js"></script>
+        
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -49,7 +53,7 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To Our Sssshop!</div>
                 <div class="masthead-heading text-uppercase">Nice to meet another <br> ssssnake lover!</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#login">JOIN US</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">SHOP NOW</a>
             </div>
         </header>
         <!-- Services-->
@@ -88,6 +92,7 @@
             </div>
         </section>
         <!-- Portfolio Grid-->
+
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
@@ -95,99 +100,13 @@
                     <h3 class="section-subheading text-muted">Discover a variety of top-quality snakes and supplies by shopping at our online store.</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="pied ball python error1"/>
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
+                    <div class="col-lg-4 col-sm-6 mb-4" id="portofioItems">
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pied Ball Python</div>
-                                <div class="portfolio-caption-subheading text-muted">Extremely rare in the wild</div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
+      
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
@@ -431,222 +350,7 @@
             </div>
         </footer>
         <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Pied Ball Python</h2>
-                                    <p class="item-intro text-muted">Rarity: <br> The pied ball python color morph is extremely rare in the wild</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="..." />
-                                    <p>The Pied Ball Python is a popular pet snake known for its striking coloration and docile temperament. These snakes have a unique pied pattern of white and dark-colored patches that create a striking contrast. They typically grow to be around 3-5 feet long and require a terrarium with a temperature range of 78-88°F and a humidity level of 50-60%. They are carnivorous and primarily eat mice or rats. As a relatively easy-to-care-for species, the Pied Ball Python is an excellent choice for first-time snake owners. Pied ball pythons are carnivorous and their diet mainly consists of small mammals such as mice or rats. It's important to provide them with pre-killed or frozen-thawed rodents to avoid injury to both the snake and the prey. The size of the food should be appropriate to the size of the snake, and they should be fed every 7 to 10 days. It's also recommended to switch up their diet with other small mammals to ensure they receive a balanced nutrition.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Scientific Name:</strong> Python regius</li>
-                                        <li><strong>Common Name:</strong> Pied Ball Python</li>
-                                        <li><strong>Appearance:</strong> Strikingly beautiful with unique pattern.</li>
-                                        <li><strong>Temperament:</strong> Generally docile, great for beginners.</li>
-                                        <li><strong>Feeding:</strong> Carnivore, eats rodents regularly.</li>
-                                        <li><strong>Habitat:</strong> Warm and humid terrarium needed.</li>
-                                        <li><strong>Lifespan:</strong> Can live up to 30 years.</li>
-                                        <li><strong>Price:</strong> $299</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                    <button class="btn btn-success btn-xl text-uppercase" type="button">Purchase Now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -656,6 +360,28 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     </body>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body" id="porfolioModalInfo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        SnakeService.list();
+    </script>
 </html>
 

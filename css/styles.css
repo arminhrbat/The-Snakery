@@ -5531,7 +5531,8 @@ textarea.form-control-lg {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  text-align: center;
+  width: 75%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -11500,7 +11501,7 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  text-align: center;
+  text-align: left;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
   font-size: 3rem;
