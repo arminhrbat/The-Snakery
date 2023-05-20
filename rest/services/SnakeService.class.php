@@ -15,6 +15,11 @@ class SnakeService extends BaseService
     {
         return $this->dao->getSnakeByNameAndPrice($common_name, $price);
     }
+
+    public function getBestSellerSnake()
+    {
+        return $this->dao->getBestSellerSnake();
+    }
 }
 
 ?>

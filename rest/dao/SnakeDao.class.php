@@ -16,6 +16,11 @@ class SnakeDao extends BaseDao
         return $this->query_unique("SELECT * FROM snakes WHERE common_name = :common_name AND price = :price", ["common_name" => $common_name, "price" => $price]);
     
     }
+
+    function getBestSellerSnake()
+    {
+        return $this->query_unique("SELECT * FROM snakes WHERE bestSeller = 'jeste'");
+    }
 }
 
 ?>

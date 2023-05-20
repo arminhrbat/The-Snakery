@@ -95,10 +95,12 @@ class BaseDao{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
       }
 
-      protected function query_unique($query, $parmas){
+      protected function query_unique($query, $parmas = []){
         $result = $this->query($query, $parmas);
         return reset($result);
       }
+
+      
 }
 
 

@@ -44,7 +44,7 @@ var SnakeService = {
             url: "rest/snakes/" + id,
             type: "GET",
             success: function(data) {
-                console.log(data);
+                console.log("Pozivanje Ileta", data);
                 $("#porfolioModalInfo").html("");
                 var html = "";
                     html += `
@@ -79,4 +79,40 @@ var SnakeService = {
             }
         });
     },
-}    
+
+    best_seller: function() {
+        $.ajax({
+            url: "rest/snakes/bestSeller",
+            type: "GET",
+            success: function(data) {
+                console.log(data);
+                $("#bestSellerItem").html("");
+                var html = "";
+                for (let i = 0; i < data.length; i++) {
+                    html += `
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" onclick="event.preventDefault(); SnakeService.list_by_id(` + data[i].id + `)">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="pied ball python error1"/>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">`+data[i].common_name+ ` </div>
+                                <div class="portfolio-caption-subheading text-muted">`+data[i].price+ `</div>
+                            </div>
+                        </div>
+                    `;
+                }
+                $("#bestSellerItem").html(html);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
+                $("#bestSellerItem").html("<p>There was an error loading the data. Please try again later.</p>");
+            }
+        });
+    }
+};
+

@@ -7,6 +7,10 @@ Flight::route('GET /snakes', function () {
     Flight::json(Flight::snakeService()->get_all());
 });
 
+Flight::route('GET /snakes/best_seller', function () {
+    Flight::json(Flight::snakeService()->getBestSellerSnake());
+});
+
 Flight::route('GET /snakes/@id', function($id){
     Flight::json(Flight::snakeService()->get_by_id($id));
 });
@@ -14,6 +18,7 @@ Flight::route('GET /snakes/@id', function($id){
 Flight::route('GET /snakes/@common_name/@price', function($common_name, $price){
     Flight::json(Flight::snakeService()->getSnakeByNameAndPrice($common_name, $price));
 });
+
 
 Flight::route('POST /snakes', function(){
     $data = Flight::request()->data->getData();

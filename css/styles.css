@@ -5490,8 +5490,8 @@ textarea.form-control-lg {
 
 .modal-dialog {
   position: relative;
-  width: auto;
-  margin: 0.5rem;
+  width: 60%;
+  margin: auto!important;
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
@@ -5532,7 +5532,6 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 75%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -11317,11 +11316,6 @@ p {
   margin-bottom: 4rem;
 }
 
-@media (min-width: 768px) {
-  section {
-    padding: 9rem 0;
-  }
-}
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11390,7 +11384,9 @@ p {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #000;
+    background-image: url("../assets/img/ssblack.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -11450,17 +11446,17 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#portfolio .portfolio-item {
+#shop .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
 }
-#portfolio .portfolio-item .portfolio-link {
+#shop .portfolio-item .portfolio-link {
   position: relative;
   display: block;
   margin: 0 auto;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#shop .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
   position: absolute;
   width: 100%;
@@ -11471,25 +11467,25 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#shop .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
 }
-#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+#shop .portfolio-item .portfolio-link:hover .portfolio-hover {
   opacity: 1;
 }
-#portfolio .portfolio-item .portfolio-caption {
+#shop .portfolio-item .portfolio-caption {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
 }
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+#shop .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
 }
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+#shop .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11501,7 +11497,7 @@ header.masthead .masthead-heading {
 .portfolio-modal .modal-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  text-align: left;
+  text-align: center;
 }
 .portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
   font-size: 3rem;
@@ -11798,4 +11794,54 @@ section#contact form#contactForm :-ms-input-placeholder {
   width: 100%; /* fill the circle */
   height: 100%; /* fill the circle */
   object-fit: cover; /* scale the image to fill */
+}
+.bg-za-shop{
+  background-image: url("../assets/img/background-for-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.boja-texta-shop
+{
+  color: white;
+}
+
+.bijeli-text
+{
+  color: white;
+}
+
+#text-boja-bez
+{
+  color: #ffe4c4;
+}
+
+.bg-footer
+{
+  background-image: url("../assets/img/ssblack.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-slova
+{
+  color: white;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+.bg-team
+{
+  background-image: url("../assets/img/background-for-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
