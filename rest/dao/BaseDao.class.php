@@ -89,14 +89,14 @@ class BaseDao{
         $stmt->execute($data);
       }
 
-      protected function query($query, $parmas){
+      protected function query($query, $params = []){
         $stmt = $this->conn->prepare($query);
-        $stmt->execute($parmas);
+        $stmt->execute($params);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
       }
 
-      protected function query_unique($query, $parmas = []){
-        $result = $this->query($query, $parmas);
+      protected function query_unique($query, $params = []){
+        $result = $this->query($query, $params);
         return reset($result);
       }
 

@@ -19,7 +19,7 @@ class SnakeDao extends BaseDao
 
     function getBestSellerSnake()
     {
-        return $this->query_unique("SELECT * FROM snakes WHERE bestSeller = 'jeste'");
+        return $this->query("SELECT * FROM snakes WHERE best_seller = 'jeste'");
     }
 }
 

@@ -6,7 +6,6 @@ require '../vendor/autoload.php';
 
 require_once __DIR__ . '/services/SnakeService.class.php';
 Flight::register('snakeService', 'SnakeService');
-
 require_once __DIR__ . '/routes/SnakeRoutes.php';
 
 Flight::route('GET /test', function(){
@@ -14,6 +13,7 @@ Flight::route('GET /test', function(){
 });
 
 Flight::start();
+
 
 
 
