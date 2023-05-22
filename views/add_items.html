@@ -1,9 +1,15 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800" id="addItems">Add items</h1>
    </div>
    
    <div class="add-item">
-    <form method="POST" action="add_item.php">
+    <form method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="scientific_name">Scientific Name:</label>
@@ -47,7 +53,7 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="image">Image:</label>
-          <input type="file" id="image" name="image">
+          <input type="text" id="image" name="image">
         </div>
       </div>
       <div class="form-row">
@@ -58,8 +64,15 @@
       </div>
       <div class="form-row">
         <div class="form-group col-md-12">
-          <button type="submit">Add Item</button>
+          <button type="button" onclick="adminItemsManage.addItems()">Add Item</button>
         </div>
       </div>
     </form>
   </div>
+
+
+  <script src="js/admin_manage_items.js"></script>
+
+  <script>
+    adminItemsManage.listItems();
+  </script>

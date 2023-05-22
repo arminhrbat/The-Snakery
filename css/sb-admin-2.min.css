@@ -4628,7 +4628,7 @@ a.close.disabled{
 .modal-dialog-centered.modal-dialog-scrollable::before{
     content:none
 }
-.modal-content{
+.modal-content-admin-2{
     position:relative;
     display:flex;
     flex-direction:column;
@@ -9149,3 +9149,12 @@ footer.sticky-footer .copyright{
 body.sidebar-toggled footer.sticky-footer{
     width:100%
 }
+
+
+.table td:last-child {
+    text-align: center;
+  }
+
+  .table th:last-child {
+    text-align: center;
+  }

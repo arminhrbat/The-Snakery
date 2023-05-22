@@ -69,9 +69,9 @@ class BaseDao{
 
     //method used to delete record from the database
     public function delete($id){
-        $stmt = $this->conn->prepare("DELETE FROM users WHERE id = :id");
-        $stmt->bindParam(':id', $id);//sql injection prevention
-        $stmt->execute();
+      $stmt = $this->conn->prepare("DELETE FROM ".$this->table_name." WHERE id = :id");
+      $stmt->bindParam(':id',$id);
+      $stmt->execute();
     }
 
     //method used to update record

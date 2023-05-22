@@ -9,7 +9,7 @@ loginBtn.addEventListener('click', (event) => {
   // check if the username and password are valid
   if (username === 'admin' && password === '123456') {
     // redirect the user to the admin.html page
-    window.location.href = 'admin/admin.html';
+    window.location.href = 'admin.html';
   } else {
     alert('Invalid username or password.');
   }
