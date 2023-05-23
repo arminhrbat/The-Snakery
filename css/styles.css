@@ -3090,9 +3090,9 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-  color: #fff;
-  background-color: #198754;
-  border-color: #198754;
+  color: #fff !important;
+  background-color: #198754 !important;
+  border-color: #198754 !important;
 }
 .btn-success:hover {
   color: #fff;
@@ -3240,9 +3240,9 @@ textarea.form-control-lg {
 }
 
 .btn-dark {
-  color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  color: #fff !important;
+  background-color: #212529 !important;
+  border-color: #212529 !important;
 }
 .btn-dark:hover {
   color: #fff;

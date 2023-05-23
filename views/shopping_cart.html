@@ -49,7 +49,11 @@
               <div class="col-lg-4 bg-grey">
                 <div class="p-5">
                   <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
-                  <p>ARTICLE NAME ........ ARTICLE QUANTITY</p>
+                  <div id="summary"></div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                    </div>
+                  </div>
                   <hr class="my-4">
                   
                   <div id="total-price" class="d-flex justify-content-between mb-4">
@@ -73,3 +77,6 @@
 
 <script src="js/article.js"></script>
 
+<script>
+  SnakeService.getCartItems();
+</script>
