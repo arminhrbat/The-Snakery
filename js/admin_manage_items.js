@@ -74,7 +74,7 @@ var adminItemsManage = {
                         <li><strong>Price:</strong> <input id="price" type="text" value="${data.price}"></li>
                         <li>
                         <strong>Best seller:</strong>
-                        <select id="bestSeller">
+                        <select id="best_seller">
                             <option value="jeste" ${data.best_seller === "jeste" ? "selected" : ""}>jeste</option>
                             <option value="nije" ${data.best_seller === "nije" ? "selected" : ""}>nije</option>
                         </select>
@@ -159,6 +159,7 @@ var adminItemsManage = {
                   contentType: "application/json",
                   dataType: "json",
                   success: function(result) {
+                    console.log(snakes.best_seller);
                     console.log("RADI");
                     toastr.success('Item updated successfully');
                     $("#editItemModal").modal("hide");

@@ -65,7 +65,7 @@ var SnakeService = {
                         <i class="fas fa-xmark me-1"></i>
                         Close Project
                     </button>
-                    <button class="btn btn-success btn-l text-uppercase" type="button" onclick="SnakeService.addToCart(${data.id})">Add to cart</button>
+                    <button class="btn btn-success btn-l text-uppercase" type="button" onclick="SnakeService.addToCart(${data.id}); window.location.href = '#shopping_cart'">Add to cart</button>
                     `;
                 $("#porfolioModalInfo").html(html);
                 $("#portfolioModal").modal("show");
@@ -140,6 +140,9 @@ var SnakeService = {
                 cartItems.push(cartItem); // Add the new item object to the array
                 localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Store the updated array
                 console.log("Stored items in localStorage: ", cartItems);
+                $("#portfolioModal").modal("hide");
+                location.reload();
+                
   },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.log(jqXHR);
@@ -153,13 +156,17 @@ var SnakeService = {
 
     getCartItems: function() {
         console.log("radi");
+        console.log(localStorage.getItem("cartItems"));
+
+        var getCart =  JSON.parse(localStorage.getItem("cartItems"));
+
+        for (let i = 0; i < getCart.length; i++)
+        {
+            console.log(getCart[i]);
+        }
+
         
-        var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        
-        var summary = document.getElementById("summary");
-        summary.innerHTML = ""; // Clear the summary element
-        
-        if (cartItems.length === 0) {
+        if (getCart.length === 0) {
           var noItemsMessage = document.createElement("p");
           noItemsMessage.textContent = "There are no items in your cart.";
           summary.appendChild(noItemsMessage); // Display the no items message
