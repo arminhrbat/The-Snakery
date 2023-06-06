@@ -70,7 +70,7 @@ var adminItemsManage = {
                         <li><strong>Feeding:</strong> <input id="feeding" type="text" value="${data.feeding}"></li>
                         <li><strong>Habitat:</strong> <input id="habitat" type="text" value="${data.habitat}"></li>
                         <li><strong>Lifespan:</strong> <input id="lifespan" type="text" value="${data.lifespan}"></li>
-                        <li><strong>Image:</strong> <input id="image" type="text" value="${data.image}"></li>
+                        <li><strong>Image:</strong> <input id="image" type="file" value="${data.image}"></li>
                         <li><strong>Price:</strong> <input id="price" type="text" value="${data.price}"></li>
                         <li>
                         <strong>Best seller:</strong>
