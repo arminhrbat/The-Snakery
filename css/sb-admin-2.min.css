@@ -9155,6 +9155,12 @@ body.sidebar-toggled footer.sticky-footer{
     text-align: center;
   }
 
+  .table td:first-child {
+    text-align: center;
+  }
+
   .table th:last-child {
     text-align: center;
   }
+
+

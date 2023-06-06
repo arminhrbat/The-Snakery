@@ -154,86 +154,119 @@ var SnakeService = {
     },
 
 
-    getCartItems: function() {
+    getCartItems: function(id) {
         console.log("radi");
         console.log(localStorage.getItem("cartItems"));
 
-        var getCart =  JSON.parse(localStorage.getItem("cartItems"));
+        $.ajax({
+            url: "rest/snakes/" + id,
+            type: "GET",
+            success: function(data) {
+                console.log("OVO JE :" , data);
+                var getCart =  JSON.parse(localStorage.getItem("cartItems"));
 
-        for (let i = 0; i < getCart.length; i++)
-        {
-            console.log(getCart[i]);
-        }
+                var html="";
 
+                for (let i = 0; i < getCart.length; i++)
+                 {
+
+                    const item = getCart[i].item;
+                    console.log("Proba:::: ", data[i]);
+                    html+=`<hr class="my-4">
+
+                  <div class="row mb-4 d-flex justify-content-between align-items-center">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                      <h6 class="text-muted">${item.common_name}</h6>
+                    </div>
         
-        if (getCart.length === 0) {
-          var noItemsMessage = document.createElement("p");
-          noItemsMessage.textContent = "There are no items in your cart.";
-          summary.appendChild(noItemsMessage); // Display the no items message
-        } else {
-          cartItems.forEach(function(cartItem) {
-            var commonName = cartItem.item.common_name; // Get the common name of the item
-            
-            var itemSummary = document.createElement("div");
-            itemSummary.className = "cart-item-summary";
-            
-            var itemName = document.createElement("span");
-            itemName.textContent = commonName;
-            
-            var quantityDropdown = document.createElement("select");
-            quantityDropdown.className = "quantity-dropdown";
-            for (var i = 1; i <= 10; i++) {
-              var option = document.createElement("option");
-              option.value = i;
-              option.text = i;
-              quantityDropdown.appendChild(option);
+                    <div class="col-md-4 col-lg-2 col-xl-2 offset-lg-1">
+                      <h6 class="mb-1">${item.price}$</h6>
+                    </div>
+                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <a class="text-muted"><i class="fas fa-times" onclick="SnakeService.deleteFromCart(${item.id})"></i></a>
+                    </div>
+                  </div>`;
+                     console.log(getCart[i]);
+                 }
+                 $("#summary").html(html);
+                 SnakeService.getTotalPrice();
+
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
             }
-            
-            var removeButton = document.createElement("button");
-            removeButton.className = "remove-button";
-            removeButton.textContent = "Remove";
-            removeButton.addEventListener("click", function() {
-              var itemId = cartItem.id; // Get the ID of the item to be removed
-              SnakeService.removeCartItem(itemId); // Call the removeCartItem function with the item ID
-            });
-            
-            itemSummary.appendChild(itemName);
-            itemSummary.appendChild(quantityDropdown);
-            itemSummary.appendChild(removeButton);
-            summary.appendChild(itemSummary); // Append the item summary to the summary element
-          });
-          
-          // Update the total price
-          var totalPriceElement = document.getElementById("total-price");
-          var totalPrice = calculateTotalPrice(cartItems); // You'll need to implement this function
-          totalPriceElement.textContent = "TOTAL PRICE IS: $" + totalPrice;
-        }
-      },
-      
-      removeCartItem: function(itemId) {
-        var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        
-        // Find the index of the item with the matching ID
-        var itemIndex = cartItems.findIndex(function(cartItem) {
-          return cartItem.id === itemId;
         });
-        
-        if (itemIndex !== -1) {
-          // Remove the item from the cartItems array
-          cartItems.splice(itemIndex, 1);
-          
-          // Update the cart items in local storage
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          
-          console.log("Item removed from cart: ", itemId);
-          
-          // Refresh the cart items display
-          SnakeService.getCartItems();
-        }
+    },
+
+    getTotalPrice:function(){
+        $.ajax({
+          url: `rest/snakes`,
+          type: "GET",
+          success: function(data) {
+            console.log(data);
+            var getCart = JSON.parse(localStorage.getItem("cartItems"));
+            
+            var totalPrice = 0;
+
+            console.log("Ovo je cart: ", getCart);
+
+            for (let i = 0; i < getCart.length; i++) {
+                const item = getCart[i].item;
+                console.log("ime " ,item.common_name);
+                console.log(getCart.length)
+                totalPrice += parseFloat(item.price);
+              }
+
+            var html=`
+            <p>TOTAL PRICE IS: ${totalPrice}$</p>
+            `;
+            console.log(totalPrice);
+            $("#total-price").html(html);
+    
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) {
+            toastr.error(XMLHttpRequest.responseJSON.message);
+            loginService.logout();
+          }
+        });
       },
-      
-      
-      
-    };
 
 
+      deleteFromCart:function(id){
+        $.ajax({
+            url: `rest/snakes`,
+            type: "GET",
+            success: function(data) {
+                console.log("Data je u dlt: ", data);
+                console.log(":----", id);
+                var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      
+                // Find the index of the item with the specified ID in the cartItems array
+                var index = cartItems.findIndex(function(item) {
+                    return item.id === id;
+                });
+
+                // If the item is found, remove it from the cartItems array
+                if (index !== -1) {
+                    cartItems.splice(index, 1);
+
+                    // Store the updated cartItems back to local storage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+                    // Call the getCartItems function to update the displayed cart
+                    SnakeService.getCartItems();
+                }
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) {
+                toastr.error(XMLHttpRequest.responseJSON.message);
+                loginService.logout();
+              }
+            });
+          },
+
+
+         
+        
+}
