@@ -9152,15 +9152,15 @@ body.sidebar-toggled footer.sticky-footer{
 
 
 .table td:last-child {
-    text-align: center;
+    text-align: left;
   }
 
   .table td:first-child {
-    text-align: center;
+    text-align: left;
   }
 
   .table th:last-child {
-    text-align: center;
+    text-align: left;
   }
 
 
