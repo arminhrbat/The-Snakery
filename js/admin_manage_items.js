@@ -5,7 +5,9 @@ var adminItemsManage = {
         $.ajax({
             url: `rest/admin/snakes`,
             type: "GET",
-            
+            beforeSend: function(xhr) {
+              xhr.setRequestHeader('Authorization', localStorage.getItem('token'));
+            },
             success: function(data) {
             $("#admin-items-list").html("");
             console.log(data);

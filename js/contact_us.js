@@ -36,6 +36,9 @@ var ContactUsService = {
             $.ajax({
                 url: `rest/admin/contact_us`,
                 type: "GET",
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('Authorization', localStorage.getItem('token'));
+                  },
                 
                 success: function(data) {
                 $("#message-list").html("");
@@ -56,7 +59,8 @@ var ContactUsService = {
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                 toastr.error(XMLHttpRequest.responseJSON.message);
-                loginService.logout();
+                localStorage.clear();
+                window.location.replace("login.html");
                 }
             });
             },
