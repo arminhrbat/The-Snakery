@@ -15,7 +15,7 @@ var SnakeService = {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/pied-ball-python1.jpeg" alt="pied ball python error1"/>
+                                <img class="img-fluid" src="` + data[i].image + `" alt="pied ball python error1"/>
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">`+data[i].common_name+ ` </div>
@@ -49,7 +49,7 @@ var SnakeService = {
                     html += `
                     <h2 class="text-uppercase">` + data.common_name + `</h2>
                     <p class="item-intro text-muted">Rarity: <br> `+ data.rarity +` </p>
-                    <img class="img-fluid" src="assets/img/portfolio/${data.image}" alt="${data.common_name}"/>
+                    <img class="img-fluid" src="` + data.image + `" alt="${data.common_name}"/>
                     <p>` + data.description + `</p>
                     <ul class="list-inline">
                         <li><strong>Scientific Name:</strong> ` + data.scientific_name + `</li>
@@ -99,7 +99,7 @@ var SnakeService = {
                                         <div class="portfolio-hover">
                                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                         </div>
-                                        <img class="img-fluid" src="assets/img/portfolio/${data[i].image}" alt="${data[i].common_name}"/>
+                                        <img class="img-fluid" src="` + data[i].image + `" alt="image load error1"/>
                                     </a>
                                     <div class="portfolio-caption">
                                         <div class="portfolio-caption-heading">${data[i].common_name}</div>
