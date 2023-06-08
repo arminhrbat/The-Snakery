@@ -1,6 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../Config.class.php';
 
 //cannot be execute
 
@@ -13,12 +13,13 @@ class BaseDao{
     public function __construct($table_name){
         //connecting to the database 
         $this->table_name = $table_name;
-        $servername = Config::$servername;
-        $username = Config::$username;
-        $password = Config::$password;
-        $schema = Config::$schema;
+        $servername = Config::DB_HOST();
+        $username = Config::DB_USERNAME();
+        $password = Config::DB_PASSWORD();
+        $schema = Config::DB_SCHEME();
+        $port = Config::DB_PORT();
         
-        $this->conn = new PDO("mysql:host=$servername;dbname=$schema", $username, $password);
+        $this->conn = new PDO("mysql:host=$servername;dbname=$schema;port=$port", $username, $password);
         // set the PDO error mode to exception
         $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

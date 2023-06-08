@@ -5,7 +5,15 @@ ini_set('display_errors', 1);
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 require '../vendor/autoload.php';
-
+use OpenApi\scan;
+/**
+ * @OA\Info(title="The Snakery", version="0.1", @OA\Contact(email="arminhrbat@yahoo.com", name="Armin Hrbat"))
+ * @OA\OpenApi(
+ *    @OA\Server(url="http://localhost:8888/The-Snakery/rest", description="Development Environment" ),
+ *    @OA\Server(url="https://todos.biznet.ba/rest", description="Production Environment" )
+ * ),
+ * @OA\SecurityScheme(securityScheme="ApiKeyAuth", type="apiKey", in="header", name="Authorization" )
+ */
 
 Flight::route('/*',function(){
     //perform JWT decode
@@ -60,7 +68,12 @@ require_once __DIR__ . '/routes/ContactUsRoutes.php';
 
 
 
-
+/*REST API documentation endpoint*/
+Flight::route('GET /docs.json',function(){
+  $openapi=\OpenApi\Generator::scan(["./services"]);
+  header('Content-Type:application/json');
+  echo $openapi->toJson();
+});
 
 
 

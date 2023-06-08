@@ -1,5 +1,14 @@
 <?php
 
+
+/**
+ * @OA\Info(
+ *     title="My First API",
+ *     version="0.1"
+ * )
+ */
+
+
 class BaseService
 {
     protected $dao;

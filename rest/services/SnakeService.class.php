@@ -11,6 +11,12 @@ class SnakeService extends BaseService
         parent::__construct(new SnakeDao);
     }
 
+/**
+* @OA\Get(path="/The-Snakery/rest/snakes",tags={"snakes"},security={{"ApiKeyAuth":{}}},
+*         summary ="List all snakes",
+*         @OA\Response(response=200,description="All snakes")
+* )
+*/
     public function getSnakeByNameAndPrice($common_name, $price)
     {
         return $this->dao->getSnakeByNameAndPrice($common_name, $price);
