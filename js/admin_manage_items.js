@@ -16,7 +16,7 @@ var adminItemsManage = {
                 html += `
             <tr>
                 <td>${data[i].scientific_name}</td>
-                <td>${data[i].price} $</td>
+                <td>${data[i].price}$</td>
                 <td>
                 <button class="btn btn-primary btn-sm" onclick="adminItemsManage.editItem(${data[i].id})">Edit</button>
                 <button class="btn btn-danger btn-sm" onclick="adminItemsManage.deleteItem(${data[i].id})">Delete</button>
@@ -73,7 +73,7 @@ var adminItemsManage = {
                         <li><strong>Habitat:</strong> <input id="habitat" type="text" value="${data.habitat}"></li>
                         <li><strong>Lifespan:</strong> <input id="lifespan" type="text" value="${data.lifespan}"></li>
                         <li><strong>Image:</strong> <input id="image" type="text" value="${data.image}"></li>
-                        <li><strong>Price:</strong> <input id="price" type="text" value="${data.price}"></li>
+                        <li><strong>Price:</strong> <input id="price" type="text" value="${data.price}$"></li>
                         <li>
                         <strong>Best seller:</strong>
                         <select id="best_seller">

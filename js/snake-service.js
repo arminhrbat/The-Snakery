@@ -19,7 +19,7 @@ var SnakeService = {
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">`+data[i].common_name+ ` </div>
-                                <div class="portfolio-caption-subheading text-muted">`+data[i].price+ `</div>
+                                <div class="portfolio-caption-subheading text-muted">`+data[i].price+ `$</div>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@ var SnakeService = {
                         <li><strong>Feeding:</strong> ` + data.feeding + `</li>
                         <li><strong>Habitat:</strong> ` + data.habitat + `</li>
                         <li><strong>Lifespan:</strong> ` + data.lifespan + `</li>
-                        <li><strong>Price:</strong> ` + data.price + `</li>
+                        <li><strong>Price:</strong> ` + data.price + `$</li>
                     </ul>
                     <button class="btn btn-primary btn-l text-uppercase me-4" data-bs-dismiss="modal" type="button">
                         <i class="fas fa-xmark me-1"></i>
@@ -103,7 +103,7 @@ var SnakeService = {
                                     </a>
                                     <div class="portfolio-caption">
                                         <div class="portfolio-caption-heading">${data[i].common_name}</div>
-                                        <div class="portfolio-caption-subheading text-muted">${data[i].price}</div>
+                                        <div class="portfolio-caption-subheading text-muted">${data[i].price}$</div>
                                     </div>
                                 </div>
                             </div>
